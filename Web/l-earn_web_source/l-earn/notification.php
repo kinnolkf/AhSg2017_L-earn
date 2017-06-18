@@ -96,6 +96,7 @@
 					<li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
 					<li><a href="notification.php"><i class="fa fa-envelope-o"></i> Notification</a></li>
 					<li><a href="#"><i class="fa fa-clock-o"></i> History</a></li>
+					<li><a href="Statistics.php"><i class="fa fa-line-chart"></i> Statistics</a></li>
                 </ul>
               </div>
             </div>

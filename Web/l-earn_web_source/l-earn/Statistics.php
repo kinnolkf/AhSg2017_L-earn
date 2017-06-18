@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	
 
-    <title>L-earn | Home</title>
+
+    <title>L-earn | Statistics</title>
 
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -33,6 +35,13 @@
     <link href="build/css/custom.min.css" rel="stylesheet">
 	
 	<link href="css/styles.css" rel="stylesheet">
+	<style>
+
+      #map {
+        height: 400px;
+      }
+    </style>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </head>
 
   <body class="nav-md">
@@ -69,6 +78,7 @@
 					<li><a href="notification.php"><i class="fa fa-envelope-o"></i> Notification</a></li>
 					<li><a href="#"><i class="fa fa-clock-o"></i> History</a></li>
 					<li><a href="Statistics.php"><i class="fa fa-line-chart"></i> Statistics</a></li>
+					
                 </ul>
               </div>
             </div>
@@ -190,49 +200,13 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-          <!-- top tiles -->
-          <div class="row top_tiles">
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="tile-stats">
-                  <div class="icon"><i class="fa fa-caret-square-o-right"></i></div>
-                  <div class="count">123</div>
-                  <h3>Videos</h3>
-                  <p>Total vidoes posted.</p>
-                </div>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="tile-stats">
-                  <div class="icon"><i class="fa fa-comments-o"></i></div>
-                  <div class="count">10</div>
-                  <h3>Comments</h3>
-                  <p>Total comments on my videos.</p>
-                </div>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<div class="tile-stats" id="alertPanel">
-                  <div class="icon"><i class="fa fa-envelope-o"></i></div>
-                  <div id="alertCountField" class="count">0</div>
-                  <h3>Alerts</h3>
-                  <p>Alert notifications.</p>
-                </div>
-                
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="tile-stats">
-                  <div class="icon"><i class="fa fa-check-square-o"></i></div>
-                  <div class="count">15</div>
-                  <h3>Reviews</h3>
-                  <p>Total submitted reviews.</p>
-                </div>
-              </div>
-            </div>
-          <!-- /top tiles -->
+          
 
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="x_panel tile">
                 <div class="x_title">
-                  <h2>Active Sessions</h2>
+                  <h2>Skills Heat Map</h2>
                   <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
@@ -251,51 +225,15 @@
                   <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<img src="images/samplevideo1.jpg" width="100%" height="100%" alt="Dummy Video" class="">
-						<div class="block">
-                          <div class="block_content">
-                            <h2 class="title">
-								  <a>How to bake donut?</a>
-							  </h2>
-                            <div class="byline">
-                              <a>Jane Smith</a> <span class="pull-right">1,024 Views</span>
-                            </div>
-                            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ... <a>Read&nbsp;More</a>
-                            </p>
-                          </div>
-                        </div>
+				
+					<div class="col-md-12 col-sm-12 col-xs-12">
+					
+						<div id="map"></div>
+						
+						
 					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<img src="images/samplevideo2.jpg" width="100%" height="100%" alt="Dummy Video" class="">
-						<div class="block">
-                          <div class="block_content">
-                            <h2 class="title">
-								  <a>How to repair pipe</a>
-							  </h2>
-                            <div class="byline">
-                              <a>Pablo Aimar</a> <span class="pull-right">456 Views</span>
-                            </div>
-                            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ... <a>Read&nbsp;More</a>
-                            </p>
-                          </div>
-                        </div>
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<img src="images/samplevideo3.jpg" width="100%" height="100%" alt="Dummy Video" class="">
-						<div class="block">
-                          <div class="block_content">
-                            <h2 class="title">
-								  <a>Replacing bicycle gears</a>
-							  </h2>
-                            <div class="byline">
-                              <a>Steve Austin</a> <span class="pull-right">24 Views</span>
-                            </div>
-                            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ... <a>Read&nbsp;More</a>
-                            </p>
-                          </div>
-                        </div>
-					</div>
+
+					
                 </div>
               </div>
             </div>
@@ -356,16 +294,270 @@
     <script src="build/js/custom.min.js"></script>
 	<script src="js/pagescripts.js"></script>
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script>
-		var myInterval = setInterval(function() {
-		   $.get( "check_notification.php?method=GetAlertCount", function( data ) {
-			   if(data > 0)
-			   {
-				   TriggerAlert(data);
-			   }
-			   //console.log("Data Refreshed : " + data);
-		   });      
-		}, 1000);
-	</script>
+		var map;
+		var infoWindow;
+		
+		google.charts.load('current', {'packages':['corechart']});
+		//google.charts.setOnLoadCallback(drawChart);
+
+		function initMap() {
+			map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 5,
+				center: {lat: 2.923841, lng: 101.6400315},
+			});
+		  
+			map.data.loadGeoJson('geodata/SkillbyCountry.json');
+		  
+			map.data.setStyle(function(feature) {
+				var color = 'red';
+				if (feature.getProperty('color')) {
+					color = feature.getProperty('color');
+				}
+				return /** @type {google.maps.Data.StyleOptions} */({
+					fillColor: color,
+					strokeColor: color,
+					strokeWeight: 1
+				});
+			});
+		  
+			map.data.addListener('click', function(event) {
+				PlotStatistics(event);
+			});
+			
+			// map.data.addListener('mouseover', function(event) {
+				// var label = event.feature.getProperty('label');
+				// var totalTrans = event.feature.getProperty('TransactedAmountSum');
+				
+				// infoWindow.setContent("State : " + label + "</br>Total Count : " + totalTrans);
+				// infoWindow.setPosition(event.latLng);
+				// infoWindow.open(map);
+			// });
+
+		  
+			map.addListener('zoom_changed', function() {
+				ReloadMapData();
+			});
+			
+			infoWindow = new google.maps.InfoWindow;
+		}
+		
+		var isCountryLayerLoaded = true;
+		var isStateLayerLoaded = false;
+		var isTownLayerLoaded = false;
+		
+		function ReloadMapData()
+		{
+			var zoomLevel = map.getZoom();
+			//console.log('zoom Level : ' + zoomLevel);
+			
+			if(zoomLevel >= 9)
+			{
+				if(!isTownLayerLoaded)
+				{
+					isCountryLayerLoaded = false;
+					isStateLayerLoaded = false;
+					
+					//remove existing
+					map.data.forEach(function(feature) {
+						map.data.remove(feature);
+					});
+					
+					//load by town
+					map.data.loadGeoJson('geodata/SkillbyTown.json');
+					isTownLayerLoaded = true;
+				}
+			}
+			else if(zoomLevel >= 7)
+			{
+				if(!isStateLayerLoaded)
+				{
+					isCountryLayerLoaded = false;
+					isTownLayerLoaded = false;
+					
+					//remove existing
+					map.data.forEach(function(feature) {
+						map.data.remove(feature);
+					});
+					
+					//load by state
+					map.data.loadGeoJson('geodata/SkillbyState.json');
+					isStateLayerLoaded = true;
+				}
+			}
+			else
+			{
+				if(!isCountryLayerLoaded)
+				{
+					isTownLayerLoaded = false;
+					isStateLayerLoaded = false;
+					
+					//remove existing
+					map.data.forEach(function(feature) {
+						map.data.remove(feature);
+					});
+					
+					//load by country
+					map.data.loadGeoJson('geodata/SkillbyCountry.json');
+					isCountryLayerLoaded = true;
+				}
+			}
+		}
+
+		function PlotStatistics(event)
+		{
+			var label = event.feature.getProperty('label');
+			
+			var topsales_area = event.feature.getProperty('TopSales_Area');
+			var topsales_price = event.feature.getProperty('TopSales_Price');
+			
+			var toprental_area = event.feature.getProperty('TopRental_Area');
+			var toprental_price = event.feature.getProperty('TopRental_Price');
+			
+			var listing_sell = event.feature.getProperty('Listing_SELL');
+			var listing_rent = event.feature.getProperty('Listing_RENT');
+			
+			var search_price = event.feature.getProperty('Search_PRICE');
+			var search_size = event.feature.getProperty('Search_SIZE');
+			
+			//console.log('label : ' + label);
+			$("#modalHeader").html('Analysis for (' + label + ')');
+			
+			drawTopSalesChart(topsales_area, topsales_price);
+			drawTopRentChart(toprental_area, toprental_price);
+			drawPropTypeChart(listing_sell, listing_rent);
+			drawPropSearchChart(search_size, search_price);
+			
+			$("#myModal").modal("show");
+			//document.getElementById('info-box').textContent = event.feature.getProperty('letter');
+		}
+
+
+		function drawPropTypeChart(saleCount, rentCount) {
+
+			var arrayData = new Array();
+			arrayData.push(['Property Type', 'Available Units']);
+			arrayData.push(['For Sales', parseInt(saleCount)]);
+			arrayData.push(['To Rent', parseInt(rentCount)]);
+			
+			var data = google.visualization.arrayToDataTable(arrayData);
+			var options = {
+				title: 'Available Listings',
+				colors: ['blue', 'green', 'red', 'green', 'yellow', 'gray'],
+				//legend: { position: 'right', alignment: 'center' },
+				legend: 'labeled', pieSliceText: 'none',
+				slices: {0: {offset: 0.2}},
+				width: 560,
+				height: 250,
+				is3D:false,
+			};
+
+			var chart = new google.visualization.PieChart(document.getElementById('chart3'));
+
+			//console.log('Chart : ' + chart);
+			chart.draw(data, options);
+		}
+		
+		function drawPropSearchChart(sizeCount, priceCount) {
+
+			var arrayData = new Array();
+			arrayData.push(['Search Key', 'Result Count']);
+			arrayData.push(['Price', parseInt(priceCount)]);
+			arrayData.push(['Size', parseInt(sizeCount)]);
+			
+			var data = google.visualization.arrayToDataTable(arrayData);
+			var options = {
+				title: 'Search Creteria',
+				colors: ['purple', 'orange', 'red', 'green', 'yellow', 'gray'],
+				//legend: { position: 'right', alignment: 'center' },
+				legend: 'labeled', pieSliceText: 'none',
+				width: 560,
+				height: 250,
+				pieHole: 0.4,
+				slices: {1: {offset: 0.2}},
+				is3D:false,
+			};
+
+			var chart = new google.visualization.PieChart(document.getElementById('chart4'));
+
+			//console.log('Chart : ' + chart);
+			chart.draw(data, options);
+		}
+		
+		function drawTopSalesChart(areaCollection, priceCollection) {
+
+			console.log('price: '+priceCollection);
+			var areaArray = areaCollection.split(","); 
+			var priceArray = priceCollection.split(","); 
+			
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', 'Area');
+			data.addColumn('number', 'Price');
+
+			for(var i=0; i < areaArray.length; i++)
+			{
+				var dataValue = 0;				
+				if(priceArray[i] !== 'undefined')
+				{
+					dataValue = parseInt(priceArray[i]);
+				}
+				data.addRows([
+					[areaArray[i], dataValue]
+				]);
+
+			}
+			var options = {
+				title: 'Top Sales',
+				is3D:true,
+				colors: ['blue', 'red', 'black', 'green', 'yellow', 'gray'],
+				legend: { position: 'none', alignment: 'center' },
+				width: 560,
+				height: 250,
+				hAxis: {title: "" , direction:1, slantedText:true, slantedTextAngle:340 }
+			};
+			
+			var chart = new google.visualization.ColumnChart(document.getElementById('chart1'));
+			chart.draw(data, options);
+		}
+		
+		function drawTopRentChart(areaCollection, priceCollection) {
+
+			console.log('price: '+priceCollection);
+			var areaArray = areaCollection.split(","); 
+			var priceArray = priceCollection.split(","); 
+			
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', 'Area');
+			data.addColumn('number', 'Price');
+
+			for(var i=0; i < areaArray.length; i++)
+			{
+				var dataValue = 0;				
+				if(priceArray[i] !== 'undefined')
+				{
+					dataValue = parseInt(priceArray[i]);
+				}
+				data.addRows([
+					[areaArray[i], dataValue]
+				]);
+
+			}
+			var options = {
+				title: 'Top Rental',
+				is3D:true,
+				colors: ['green', 'red', 'black', 'green', 'yellow', 'gray'],
+				legend: { position: 'none', alignment: 'center' },
+				width: 560,
+				height: 250,
+				hAxis: {title: "" , direction:1, slantedText:true, slantedTextAngle:340 }
+			};
+			
+			var chart = new google.visualization.ColumnChart(document.getElementById('chart2'));
+			chart.draw(data, options);
+		}
+	  
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsTOH6ts-oJ7XpvJ6wEcXHYDKDhGSVx-w&callback=initMap"async defer></script>	
   </body>
 </html>
