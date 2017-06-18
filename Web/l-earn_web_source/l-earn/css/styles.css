@@ -1,0 +1,13 @@
+#smalllogo{
+	margin-left:5px;
+}
+
+.alertbackground{
+        background: #f48642;
+    }
+
+  #alertPanel{
+        -webkit-transition: background 1.0s ease-in-out;
+        -ms-transition:     background 1.0s ease-in-out;
+        transition:         background 1.0s ease-in-out;
+    }
